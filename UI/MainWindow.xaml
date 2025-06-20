@@ -1,0 +1,77 @@
+﻿<Window x:Class="AppTrucoMesaVisual.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppTrucoMesaVisual"
+        mc:Ignorable="d"
+         Title="Mesa de Truco" Height="600" Width="1000">
+    <Window.Background>
+        <ImageBrush ImageSource="pack://application:,,,/Recursos/fondo_pano.jpg" Stretch="UniformToFill"/>
+
+    </Window.Background>
+
+    <Canvas>
+
+        <!-- Botones -->
+
+        <!-- Botón Repartir -->
+        <Button x:Name="BtnRepartir"
+        Content="Repartir"
+        Canvas.Left="56" Canvas.Top="355"
+        Width="100" Height="30"
+        Click="BtnRepartir_Click"/>
+
+        <!-- CheckBox para repartir picando -->
+        <CheckBox x:Name="ChkPicar"
+          Content="Picar"
+          Canvas.Left="182" Canvas.Top="361"
+          FontSize="14"
+          Foreground="White"
+          FontWeight="Bold"/>
+
+
+        <!-- ANIMACION -->
+        <!-- Carta animada que se moverá -->
+        <Image x:Name="CartaAnimada" Width="100" Height="150"
+       Visibility="Hidden"
+       Canvas.Left="50" Canvas.Top="50"/>
+
+        <!-- CARTAS -->
+
+        <!-- Mazo -->
+        <Image x:Name="Mazo" Width="100" Height="150"
+       Source="pack://application:,,,/Recursos/dorso.png"
+       Canvas.Left="260" Canvas.Top="217"/>
+
+        <!-- Cartas animadas -->
+        <Image x:Name="CartaAnimada1" Width="100" Height="150"
+       Visibility="Hidden"
+       Canvas.Left="50" Canvas.Top="50"/>
+
+        <Image x:Name="CartaAnimada2" Width="100" Height="150"
+       Visibility="Hidden"
+       Canvas.Left="50" Canvas.Top="50"/>
+
+        <Image x:Name="CartaAnimada3" Width="100" Height="150"
+       Visibility="Hidden"
+       Canvas.Left="50" Canvas.Top="50"/>
+
+        <!-- Cartas animadas del oponente -->
+        <Image x:Name="CartaOponente1" Width="100" Height="150"
+       Visibility="Hidden"
+       Canvas.Left="50" Canvas.Top="50"/>
+
+        <Image x:Name="CartaOponente2" Width="100" Height="150"
+       Visibility="Hidden"
+       Canvas.Left="50" Canvas.Top="50"/>
+
+        <Image x:Name="CartaOponente3" Width="100" Height="150"
+       Visibility="Hidden"
+       Canvas.Left="50" Canvas.Top="50"/>
+
+
+
+
+    </Canvas>
+</Window>
