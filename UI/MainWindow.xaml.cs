@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AppTrucoMesaVisual.Core;
 
 
 namespace AppTrucoMesaVisual
@@ -86,6 +87,28 @@ namespace AppTrucoMesaVisual
                 }
             }
         }
+
+        // ---------------------------
+        // Botones de envido
+        // ---------------------------
+        private void BtnEnvido_Click(object sender, RoutedEventArgs e)
+        {
+            ControlJuego.AgregarCantoEnvido(TipoEnvido.Envido);
+            Console.WriteLine(LogicaEnvido.ObtenerDescripcionCantos(ControlJuego.CantosEnvidoActuales));
+        }
+
+        private void BtnRealEnvido_Click(object sender, RoutedEventArgs e)
+        {
+            ControlJuego.AgregarCantoEnvido(TipoEnvido.RealEnvido);
+            Console.WriteLine(LogicaEnvido.ObtenerDescripcionCantos(ControlJuego.CantosEnvidoActuales));
+        }
+
+        private void BtnFaltaEnvido_Click(object sender, RoutedEventArgs e)
+        {
+            ControlJuego.AgregarCantoEnvido(TipoEnvido.FaltaEnvido);
+            Console.WriteLine(LogicaEnvido.ObtenerDescripcionCantos(ControlJuego.CantosEnvidoActuales));
+        }
+
 
 
 

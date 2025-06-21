@@ -70,6 +70,22 @@
        Visibility="Hidden"
        Canvas.Left="50" Canvas.Top="50"/>
 
+        <!-- Botones para cantos de Envido -->
+        <Button Content="Envido"
+        Canvas.Left="50" Canvas.Top="480"
+        Width="80" Height="30"
+        Click="BtnEnvido_Click"/>
+
+        <Button Content="Real Envido"
+        Canvas.Left="140" Canvas.Top="480"
+        Width="100" Height="30"
+        Click="BtnRealEnvido_Click"/>
+
+        <Button Content="Falta Envido"
+        Canvas.Left="250" Canvas.Top="480"
+        Width="100" Height="30"
+        Click="BtnFaltaEnvido_Click"/>
+
 
 
 
