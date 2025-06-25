@@ -8,23 +8,113 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Recursos\10_basto.png" />
+    <None Remove="Recursos\10_copa.png" />
+    <None Remove="Recursos\10_espada.png" />
+    <None Remove="Recursos\10_oro.png" />
+    <None Remove="Recursos\11_basto.png" />
+    <None Remove="Recursos\11_copa.png" />
+    <None Remove="Recursos\11_espada.png" />
+    <None Remove="Recursos\11_oro.png" />
+    <None Remove="Recursos\12_basto.png" />
+    <None Remove="Recursos\12_copa.png" />
+    <None Remove="Recursos\12_espada.png" />
+    <None Remove="Recursos\12_oro.png" />
+    <None Remove="Recursos\1_basto.png" />
+    <None Remove="Recursos\1_copa.png" />
     <None Remove="Recursos\1_espada.png" />
+    <None Remove="Recursos\1_oro.png" />
+    <None Remove="Recursos\2_basto.png" />
+    <None Remove="Recursos\2_copa.png" />
     <None Remove="Recursos\2_espada.png" />
+    <None Remove="Recursos\2_oro.png" />
+    <None Remove="Recursos\3_basto.png" />
+    <None Remove="Recursos\3_copa.png" />
     <None Remove="Recursos\3_espada.png" />
+    <None Remove="Recursos\3_oro.png" />
+    <None Remove="Recursos\4_basto.png" />
+    <None Remove="Recursos\4_copa.png" />
+    <None Remove="Recursos\4_espada.png" />
+    <None Remove="Recursos\4_oro.png" />
+    <None Remove="Recursos\5_basto.png" />
+    <None Remove="Recursos\5_copa.png" />
+    <None Remove="Recursos\5_espada.png" />
+    <None Remove="Recursos\5_oro.png" />
+    <None Remove="Recursos\6_basto.png" />
+    <None Remove="Recursos\6_copa.png" />
+    <None Remove="Recursos\6_espada.png" />
+    <None Remove="Recursos\6_oro.png" />
+    <None Remove="Recursos\7_basto.png" />
+    <None Remove="Recursos\7_copa.png" />
+    <None Remove="Recursos\7_espada.png" />
+    <None Remove="Recursos\7_oro.png" />
+    <None Remove="Recursos\8_basto.png" />
+    <None Remove="Recursos\8_copa.png" />
+    <None Remove="Recursos\8_espada.png" />
+    <None Remove="Recursos\8_oro.png" />
+    <None Remove="Recursos\9_basto.png" />
+    <None Remove="Recursos\9_copa.png" />
+    <None Remove="Recursos\9_espada.png" />
+    <None Remove="Recursos\9_oro.png" />
     <None Remove="Recursos\dorso.png" />
     <None Remove="Recursos\fondo_pano.jpg" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Recursos\10_basto.png" />
+    <Resource Include="Recursos\10_copa.png" />
+    <Resource Include="Recursos\10_espada.png" />
+    <Resource Include="Recursos\10_oro.png" />
+    <Resource Include="Recursos\11_basto.png" />
+    <Resource Include="Recursos\11_copa.png" />
+    <Resource Include="Recursos\11_espada.png" />
+    <Resource Include="Recursos\11_oro.png" />
+    <Resource Include="Recursos\12_basto.png" />
+    <Resource Include="Recursos\12_copa.png" />
+    <Resource Include="Recursos\12_espada.png" />
+    <Resource Include="Recursos\12_oro.png" />
+    <Resource Include="Recursos\1_basto.png" />
+    <Resource Include="Recursos\1_copa.png" />
     <Resource Include="Recursos\1_espada.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Recursos\1_oro.png" />
+    <Resource Include="Recursos\2_basto.png" />
+    <Resource Include="Recursos\2_copa.png" />
     <Resource Include="Recursos\2_espada.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Recursos\2_oro.png" />
+    <Resource Include="Recursos\3_basto.png" />
+    <Resource Include="Recursos\3_copa.png" />
     <Resource Include="Recursos\3_espada.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Recursos\3_oro.png" />
+    <Resource Include="Recursos\4_basto.png" />
+    <Resource Include="Recursos\4_copa.png" />
+    <Resource Include="Recursos\4_espada.png" />
+    <Resource Include="Recursos\4_oro.png" />
+    <Resource Include="Recursos\5_basto.png" />
+    <Resource Include="Recursos\5_copa.png" />
+    <Resource Include="Recursos\5_espada.png" />
+    <Resource Include="Recursos\5_oro.png" />
+    <Resource Include="Recursos\6_basto.png" />
+    <Resource Include="Recursos\6_copa.png" />
+    <Resource Include="Recursos\6_espada.png" />
+    <Resource Include="Recursos\6_oro.png" />
+    <Resource Include="Recursos\7_basto.png" />
+    <Resource Include="Recursos\7_copa.png" />
+    <Resource Include="Recursos\7_espada.png" />
+    <Resource Include="Recursos\7_oro.png" />
+    <Resource Include="Recursos\8_basto.png" />
+    <Resource Include="Recursos\8_copa.png" />
+    <Resource Include="Recursos\8_espada.png" />
+    <Resource Include="Recursos\8_oro.png" />
+    <Resource Include="Recursos\9_basto.png" />
+    <Resource Include="Recursos\9_copa.png" />
+    <Resource Include="Recursos\9_espada.png" />
+    <Resource Include="Recursos\9_oro.png" />
     <Resource Include="Recursos\dorso.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>

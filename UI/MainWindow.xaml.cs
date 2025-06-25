@@ -31,6 +31,15 @@ namespace AppTrucoMesaVisual
 
         private void BtnRepartir_Click(object sender, RoutedEventArgs e)
         {
+            ControlJuego.IniciarRonda();
+            if (ControlJuego.ManoJugador.Count < 3 || ControlJuego.ManoIA.Count < 3)
+            {
+                MessageBox.Show("Error: no se repartieron 3 cartas. Jugador: "
+                    + ControlJuego.ManoJugador.Count + " - IA: "
+                    + ControlJuego.ManoIA.Count);
+                return;
+            }
+
             var cartasJugador = new[] { CartaAnimada1, CartaAnimada2, CartaAnimada3 };
             var cartasIA = new[] { CartaOponente1, CartaOponente2, CartaOponente3 };
             var destinosJugadorX = new[] { 524.0, 658.0, 788.0 };
@@ -40,17 +49,16 @@ namespace AppTrucoMesaVisual
 
             bool picar = ChkPicar.IsChecked == true;
 
-            string[] carasJugador = {
-                "pack://application:,,,/Recursos/1_espada.png",
-                "pack://application:,,,/Recursos/2_espada.png",
-                "pack://application:,,,/Recursos/3_espada.png"
-            };
+            string[] carasJugador = ControlJuego.ManoJugador
+                .Select(nombre => $"pack://application:,,,/AppTrucoMesaVisual;component/Recursos/{nombre}.png")
+                .ToArray();
 
-                    string[] carasIA = {
-                "pack://application:,,,/Recursos/dorso.png",
-                "pack://application:,,,/Recursos/dorso.png",
-                "pack://application:,,,/Recursos/dorso.png"
-            };
+
+            string[] carasIA = ControlJuego.ManoIA
+                .Select(nombre => $"pack://application:,,,/AppTrucoMesaVisual;component/Recursos/{nombre}.png")
+                .ToArray();
+
+
 
             if (picar)
             {

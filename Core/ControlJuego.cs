@@ -14,8 +14,10 @@ namespace AppTrucoMesaVisual.Core
         public static EstadoGeneral Estado { get; private set; } = EstadoGeneral.EsperandoInicio;
         public static SubEstadoJugada SubEstado { get; private set; } = SubEstadoJugada.Nada;
         public static List<TipoEnvido> CantosEnvidoActuales { get; private set; } = new();
+        public static List<string> MazoActual { get; private set; } = new();
+        public static List<string> ManoJugador { get; private set; } = new();
+        public static List<string> ManoIA { get; private set; } = new();
 
-        
         // ------------------------
         // INICIO Y CICLO GENERAL
         // ------------------------
@@ -26,11 +28,21 @@ namespace AppTrucoMesaVisual.Core
             SubEstado = SubEstadoJugada.Nada;
         }
 
+        public static void PrepararRonda()
+        {
+            MazoActual = Mazo.GenerarCartas();
+            ManoJugador = Mazo.ObtenerMano(MazoActual, 0);
+            ManoIA = Mazo.ObtenerMano(MazoActual, 3);
+            ResetearCantosEnvido();
+        }
+
         public static void IniciarRonda()
         {
+            PrepararRonda(); // llama la lógica
             Estado = EstadoGeneral.Repartiendo;
             SubEstado = SubEstadoJugada.Nada;
         }
+
 
         public static void FinalizarRonda()
         {
@@ -168,6 +180,10 @@ namespace AppTrucoMesaVisual.Core
                 FinalizarRonda();
             }
         }
+
+
+
+
 
 
 
