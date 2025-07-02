@@ -17,6 +17,11 @@ namespace AppTrucoMesaVisual.Core
         public static List<string> MazoActual { get; private set; } = new();
         public static List<string> ManoJugador { get; private set; } = new();
         public static List<string> ManoIA { get; private set; } = new();
+        public static bool CartaYaJugada { get; set; } = false;
+        public static Turno TurnoActual { get; set; } = Turno.Jugador;
+
+
+
 
         // ------------------------
         // INICIO Y CICLO GENERAL
@@ -34,13 +39,25 @@ namespace AppTrucoMesaVisual.Core
             ManoJugador = Mazo.ObtenerMano(MazoActual, 0);
             ManoIA = Mazo.ObtenerMano(MazoActual, 3);
             ResetearCantosEnvido();
+            CartaYaJugada = false;
         }
 
         public static void IniciarRonda()
         {
-            PrepararRonda(); // llama la lógica
-            Estado = EstadoGeneral.Repartiendo;
-            SubEstado = SubEstadoJugada.Nada;
+            PrepararRonda();
+            // Determina aleatoriamente quién comienza
+            bool jugadorEmpieza = new Random().Next(2) == 0;
+
+            if (jugadorEmpieza)
+            {
+                Estado = EstadoGeneral.Jugando;
+                SubEstado = SubEstadoJugada.EsperandoJugadaJugador;
+            }
+            else
+            {
+                Estado = EstadoGeneral.Jugando;
+                SubEstado = SubEstadoJugada.EsperandoJugadaIA;              
+            }
         }
 
 
