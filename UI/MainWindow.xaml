@@ -1,129 +1,64 @@
 ﻿<Window x:Class="AppTrucoMesaVisual.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:AppTrucoMesaVisual"
-        mc:Ignorable="d"
-         Title="Mesa de Truco" Height="600" Width="1000">
+        Title="Mesa de Truco" Height="600" Width="1000">
+
     <Window.Background>
         <ImageBrush ImageSource="pack://application:,,,/Recursos/fondo_pano.jpg" Stretch="UniformToFill"/>
-
     </Window.Background>
 
     <Canvas>
 
-        <!-- Botones -->
+        <!-- Botón Repartir y Picar -->
+        <Button x:Name="BtnRepartir" Content="Repartir" Canvas.Left="56" Canvas.Top="355" Width="100" Height="30" Click="BtnRepartir_Click"/>
+        <CheckBox x:Name="ChkPicar" Content="Picar" Canvas.Left="182" Canvas.Top="361" FontSize="14" Foreground="White" FontWeight="Bold"/>
 
-        <!-- Botón Repartir -->
-        <Button x:Name="BtnRepartir"
-        Content="Repartir"
-        Canvas.Left="56" Canvas.Top="355"
-        Width="100" Height="30"
-        Click="BtnRepartir_Click"/>
-
-        <!-- CheckBox para repartir picando -->
-        <CheckBox x:Name="ChkPicar"
-          Content="Picar"
-          Canvas.Left="182" Canvas.Top="361"
-          FontSize="14"
-          Foreground="White"
-          FontWeight="Bold"/>
-
-
-        <!-- ANIMACION -->
-        <!-- Carta animada que se moverá -->
-        <Image x:Name="CartaAnimada" Width="100" Height="150"
-       Visibility="Hidden"
-       Canvas.Left="50" Canvas.Top="50"/>
-
-        <!-- CARTAS -->
+        <!-- Indicadores -->
+        <TextBlock x:Name="LblTurnoActual" Text="Turno: -" Canvas.Left="137" Canvas.Top="30" FontSize="14" Foreground="White"/>
+        <TextBlock x:Name="LblMano" Text="Mano: -" Canvas.Left="58" Canvas.Top="310" FontSize="14" Foreground="White"/>
 
         <!-- Mazo -->
-        <Image x:Name="Mazo" Width="100" Height="150"
-       Source="pack://application:,,,/Recursos/dorso.png"
-       Canvas.Left="260" Canvas.Top="217"/>
+        <Image x:Name="Mazo" Width="100" Height="150" Source="pack://application:,,,/Recursos/dorso.png" Canvas.Left="282" Canvas.Top="229"/>
 
-        <!-- Cartas animadas -->
-        <Image x:Name="CartaAnimada1" Width="100" Height="150"
-       Visibility="Hidden"
-       Canvas.Left="50" Canvas.Top="50"/>
+        <!-- Carta animada -->
+        <Image x:Name="CartaAnimada" Width="100" Height="150" Visibility="Hidden" Canvas.Left="50" Canvas.Top="50"/>
 
-        <Image x:Name="CartaAnimada2" Width="100" Height="150"
-       Visibility="Hidden"
-       Canvas.Left="50" Canvas.Top="50"/>
+        <!-- Cartas del Jugador -->
+        <Image x:Name="CartaJ1" Width="100" Height="150" Canvas.Left="599" Canvas.Top="390" MouseDown="CartaJ1_MouseDown"/>
+        <Image x:Name="CartaJ2" Width="100" Height="150" Canvas.Left="719" Canvas.Top="390" MouseDown="CartaJ2_MouseDown"/>
+        <Image x:Name="CartaJ3" Width="100" Height="150" Canvas.Left="839" Canvas.Top="390" MouseDown="CartaJ3_MouseDown"/>
 
-        <Image x:Name="CartaAnimada3" Width="100" Height="150"
-       Visibility="Hidden"
-       Canvas.Left="50" Canvas.Top="50"/>
+        <!-- Cartas de la IA -->
+        <Image x:Name="CartaIA1" Width="100" Height="150" Canvas.Left="626" Canvas.Top="15"/>
+        <Image x:Name="CartaIA2" Width="100" Height="150" Canvas.Left="746" Canvas.Top="15"/>
+        <Image x:Name="CartaIA3" Width="100" Height="150" Canvas.Left="866" Canvas.Top="15"/>
 
-        <!-- Cartas animadas del oponente -->
-        <Image x:Name="CartaOponente1" Width="100" Height="150"
-       Visibility="Hidden"
-       Canvas.Left="50" Canvas.Top="50"/>
+        <!-- Cartas jugadas (centro de la mesa) -->
+        <Image x:Name="CartaCentroJugador" Width="100" Height="150" Canvas.Left="450" Canvas.Top="154"/>
+        <Image x:Name="CartaCentroIA" Width="100" Height="150" Canvas.Left="574" Canvas.Top="193"/>
 
-        <Image x:Name="CartaOponente2" Width="100" Height="150"
-       Visibility="Hidden"
-       Canvas.Left="50" Canvas.Top="50"/>
+        <!-- Botones del Jugador (parte inferior) -->
+        <Button x:Name="BtnJ_Envido" Content="Envido" Canvas.Left="68" Canvas.Top="482" Width="90" Click="BtnJ_Envido_Click"/>
+        <Button x:Name="BtnJ_RealEnvido" Content="Real Envido" Canvas.Left="168" Canvas.Top="482" Width="90" Click="BtnJ_RealEnvido_Click"/>
+        <Button x:Name="BtnJ_FaltaEnvido" Content="Falta Envido" Canvas.Left="268" Canvas.Top="482" Width="90" Click="BtnJ_FaltaEnvido_Click"/>
+        <Button x:Name="BtnJ_Truco" Content="Truco" Canvas.Left="368" Canvas.Top="482" Width="90" Click="BtnJ_Truco_Click"/>
+        <Button x:Name="BtnJ_Retruco" Content="Retruco" Canvas.Left="72" Canvas.Top="520" Width="90" Click="BtnJ_Retruco_Click"/>
+        <Button x:Name="BtnJ_ValeCuatro" Content="Vale Cuatro" Canvas.Left="172" Canvas.Top="520" Width="90" Click="BtnJ_ValeCuatro_Click"/>
+        <Button x:Name="BtnJ_Quiero" Content="Quiero" Canvas.Left="272" Canvas.Top="520" Width="90" Click="BtnJ_Quiero_Click"/>
+        <Button x:Name="BtnJ_NoQuiero" Content="No Quiero" Canvas.Left="372" Canvas.Top="520" Width="90" Click="BtnJ_NoQuiero_Click"/>
+        <Button x:Name="BtnJ_Flor" Content="Flor" Canvas.Left="472" Canvas.Top="520" Width="90" Click="BtnJ_Flor_Click"/>
 
-        <Image x:Name="CartaOponente3" Width="100" Height="150"
-       Visibility="Hidden"
-       Canvas.Left="50" Canvas.Top="50"/>
-
-        <!-- Botones para cantos de Envido -->
-        <Button x:Name="BtnOpcion1"
-        Canvas.Left="50" Canvas.Top="480"
-        Width="100" Height="30"
-        Visibility="Collapsed"
-        Click="BtnOpcion1_Click"/>
-
-        <Button x:Name="BtnOpcion2"
-        Canvas.Left="160" Canvas.Top="480"
-        Width="100" Height="30"
-        Visibility="Collapsed"
-        Click="BtnOpcion2_Click"/>
-
-        <Button x:Name="BtnOpcion3"
-        Canvas.Left="270" Canvas.Top="480"
-        Width="100" Height="30"
-        Visibility="Collapsed"
-        Click="BtnOpcion3_Click"/>
-
-        <TextBlock x:Name="TxtMensajes"
-           Canvas.Left="442"
-           Canvas.Top="255"
-           FontSize="14"
-           Foreground="White"
-           Width="448"
-           Height="75"
-           TextWrapping="Wrap"
-           Text="Mensajes del juego aparecerán aquí..." HorizontalAlignment="Left" VerticalAlignment="Top"/>
-
-        <!-- Botones simulados para IA -->
-        <Button x:Name="BtnIA1"
-        Canvas.Left="50" Canvas.Top="20"
-        Width="100" Height="30"
-        Visibility="Visible"
-        Background="LightGray"
-        Click="BtnIA1_Click"/>
-
-        <Button x:Name="BtnIA2"
-        Canvas.Left="160" Canvas.Top="20"
-        Width="100" Height="30"
-        Visibility="Visible"
-        Background="LightGray"
-        Click="BtnIA2_Click"/>
-
-        <Button x:Name="BtnIA3"
-        Canvas.Left="270" Canvas.Top="20"
-        Width="100" Height="30"
-        Visibility="Visible"
-        Background="LightGray"
-        Click="BtnIA3_Click"/>
-
-
-
-
+        <!-- Botones de la IA (parte superior izquierda) -->
+        <Button x:Name="BtnIA_Envido" Content="Envido" Canvas.Left="37" Canvas.Top="30" Width="90" Click="BtnIA_Envido_Click"/>
+        <Button x:Name="BtnIA_RealEnvido" Content="Real Envido" Canvas.Left="137" Canvas.Top="30" Width="90" Click="BtnIA_RealEnvido_Click"/>
+        <Button x:Name="BtnIA_FaltaEnvido" Content="Falta Envido" Canvas.Left="237" Canvas.Top="30" Width="90" Click="BtnIA_FaltaEnvido_Click"/>
+        <Button x:Name="BtnIA_Truco" Content="Truco" Canvas.Left="37" Canvas.Top="70" Width="90" Click="BtnIA_Truco_Click"/>
+        <Button x:Name="BtnIA_Retruco" Content="Retruco" Canvas.Left="137" Canvas.Top="70" Width="90" Click="BtnIA_Retruco_Click"/>
+        <Button x:Name="BtnIA_ValeCuatro" Content="Vale Cuatro" Canvas.Left="237" Canvas.Top="70" Width="90" Click="BtnIA_ValeCuatro_Click"/>
+        <Button x:Name="BtnIA_Quiero" Content="Quiero" Canvas.Left="37" Canvas.Top="110" Width="90" Click="BtnIA_Quiero_Click"/>
+        <Button x:Name="BtnIA_NoQuiero" Content="No Quiero" Canvas.Left="137" Canvas.Top="110" Width="90" Click="BtnIA_NoQuiero_Click"/>
+        <Button x:Name="BtnIA_Flor" Content="Flor" Canvas.Left="237" Canvas.Top="110" Width="90" Click="BtnIA_Flor_Click"/>
 
     </Canvas>
+
 </Window>

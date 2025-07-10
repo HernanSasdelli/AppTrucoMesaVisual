@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AppTrucoMesaVisual.Core.ControlJuego">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>wAIAAACAQAEAAYCBQAIAAAIAAAACASBIgQggCBABAJg=</HashCode>
+      <FileName>Core\ControlJuego.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppTrucoMesaVisual.Core.LogicaBotones">
+    <Position X="5.75" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAQAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\LogicaBotones.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppTrucoMesaVisual.Core.LogicaEnvido">
+    <Position X="9.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ABCAAACAAgAAAAAAAAAAAAAABAAAAAAAAAAAAAkAAAA=</HashCode>
+      <FileName>Core\LogicaEnvido.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppTrucoMesaVisual.Core.Mazo">
+    <Position X="6.25" Y="2.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Mazo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="AppTrucoMesaVisual.Core.EstadoGeneral">
+    <Position X="3.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAIAQAAAAAAAAgAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Core\EstadosJuegos.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AppTrucoMesaVisual.Core.SubEstadoJugada">
+    <Position X="3.5" Y="2.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAgAAAAAAAAQAAAAAAAAAgAgAAAAIAAAAA=</HashCode>
+      <FileName>Core\EstadosJuegos.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AppTrucoMesaVisual.Core.TipoEnvido">
+    <Position X="9.25" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEABAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Core\LogicaEnvido.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AppTrucoMesaVisual.Core.Turno">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Core\Turno.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
